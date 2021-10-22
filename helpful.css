@@ -1,0 +1,188 @@
+/* CSS is how we stlye our websites
+
+we write css as follows:
+
+selector {
+    property: value;
+    property: value;
+    property: value;
+}
+
+OR 
+
+.classname {
+    property: value;
+    property: value;
+    property: value;
+}
+
+OR 
+
+#idname {
+    property: value;
+    property: value;
+    property: value;
+}
+
+our selectors are in our HTML. If the tag already exists (so things like H1,p,a img etc) we can just use the tag name:
+
+for example - if we wanted all of our paragraphs to be green we would say:
+
+p {
+    color:green 
+}
+
+and EVERY paragraph would turn green.
+
+if I wanted to apply this to only one paragraph, how could I target it?
+
+You can create your own selectors using classes and IDs. Classes can be used on multilpe things as many times as you like.
+IDs are unique - they should only be used once, and on something that there is only one of on that page.
+By this - I mean a structural part of the website that only appears once. Like navbar, sidebar, infodiv etc. This is because you can target IDs with <a>
+
+Let's start with classes!
+You can use a class to create your own selector. So let's say all my pragraphs are green at the moment - but I have one paragraph I want to be orange
+
+you declare your class in CSS by putting a . at the start - and then all the rest of the syntax is the same!
+
+.orangetext{
+    color: orange;
+}
+
+So that's my CSS - put how to I let my HTML know?
+
+When we used selectors that already exist (like P), the html automatically links them. Any p element now has that CSS. If I want to use orangetext, I need to tell it. So my HTML would be
+<h1>Welcome to my Website</h1>
+<h3>Have a good time</h3>
+<p>This text would be green</p>
+<p class="orangetext"> This text would be orange </p>
+<p> This text would be back to green</p>
+
+And I can put this on as many things as I like! If I also wanted the h3 to be orange I could use the class too!
+<h1>Welcome to my Website</h1>
+<h3 class="orangetext">Have a good time</h3>
+<p>This text would be green</p>
+<p class="orangetext"> This text would be orange </p>
+<p> This text would be back to green</p>
+
+By using class, we can target parts of our code specifically!
+
+So what's the difference with ID?
+
+In terms of CSS, there's nothing a class can do that an ID can't, or vice versa. If you're having trouble with your css, swapping Id with class won't make a difference!
+BUT ID does have some differences - it is the most important selector type. It will take precedence over everything else.
+Also - it is unique. It should only be used once per page, for an object that only appears once on the page. 
+
+So, for example, if I had one picture that I wanted to have a blue border, I wouldn't use an ID. Yes it's one thing, but it's not a unique section of the website.
+But if I had a section of the website that users needed to indentify - if this image with the blue border was a very important unique part of the website structure, I would use an ID - because I can also use IDS for links.
+
+When we use am ID in CSS - we declare in first with a # - the rest of the syntax is the same!
+
+#importantbluebox {
+    border: 5px solid blue;
+}
+
+In our HTML, if we're JUST using it for CSS/Javascript, we write div id="name"
+
+<h1>Welcome to my Website</h1>
+<h3 class="orangetext">Have a good time</h3>
+<p>This text would be green</p>
+<p class="orangetext"> This text would be orange </p>
+<p> This text would be back to green</p>
+<div id="importantbluebox"> All this content in here is part of the div important blue box. It is referenced and styled as such
+</div>
+
+Jumping away from CSS for a minute - and looking at the link.If I want to create a link to importantbluebox, rather than using href="www.url.com" - I can use the id name!
+<a href="#importantbluebox">Click here for important blue box</a>
+Notice in the link, I use the # again?
+
+This is why you can only use the ID once - imagine if you had two instances of "importantbluebox" - which one would it go to?
+
+There are MANY CSS values - it's a big language! So I couldn't tell you everything in this document - but assume if you dream it, CSS can do it.
+
+The most importanrt thing is knowing the properties and values - and this is why Google exists! There is no way you'll rememeber all of them! 
+I still have to Google background-image properties every single lesson. 
+Here's some handy codes though:
+
+/* Make EVERY image centered to its container */
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+/* Change EVERY link colour */
+
+a {
+    color: hotpink;
+}
+
+/* Change the link colour when you hover over the link */
+
+a:hover {
+    color:orange;
+}
+
+/* Remove the underline from links */
+
+a {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* Hit a link in a specific div */
+.divclassname a {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* For flexbox!:
+
+Flexbox is a way of controling the layout and position of content in a way we couldn't before.
+
+It works on 2 axes - what we would recognise from maths as the x and y axes are called Main and Cross for flexbox.
+Flex can only work on one axis of these at a time, and by default, it is a row.
+This means that - by default, our content runs from main-start to main-end (flex start, flex end)
+We move it across the page using justify-content, a property that runs from left to right - along the main axis
+We move it up and down the page using align-items, a property that runs from top to bottom, alonmg the cross axis
+
+We can ask flexbox to flip this though, and display out content in a column, so all those items are on top of eachother.
+to do this, we use flex-direction:column
+When we do this, our axes are flipped. Cross becomes our left to right axis, main becomes top to bottom. 
+
+This is very important when using flexbox.
+
+
+
+If we have a div, we can apply flex to that div - and then we can control the items within that div. Each element is something we can control.
+
+It only works on one level though, if we have a div, in a div, in a div, flexbox will only work on one div below it. So:
+
+
+
+CSS: 
+.content{
+    display: flex;                                       We use display: flex so we can assign flex properties to this div
+    flex-direction: column;                              I want the content on top, not next to, eachother, so I use column
+    justify-content: center;       
+    align-items: center;                                 The axis is flipped, so I use align-items for left-right moves 
+    background-color: sandybrown;
+    border: solid 10px red;
+
+}
+.subcontent{
+    background-color: lightgreen;
+    border: solid 10px orange;
+
+}
+
+HTML:
+
+<div class="content">                                     This Div has flex applied to it. The things inside it are centered
+Hello this is my div, it has content in                   This text will appear in the centre of the content div
+    <div class="subcontent">                              This div will also appear in the centre of the content div
+        Hello this is my second div                       But this content will not appear centred. 
+
+
