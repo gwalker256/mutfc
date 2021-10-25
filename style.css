@@ -1,89 +1,112 @@
-/* /* p{
-    color: red;
-
-   
-} */
-/* p {    
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-     
-}
-div{
-    color:green;
-
-}
-a {
-    color: hotpink;
-}
-img {    
-    margin-left: auto;
-    margin-right: auto;
-    display: block;}
-    img {
-        opacity: 0.5;
-      }
 body {
-  background: lightblue;
   
-}
-body {    margin-left: auto;
-    margin-right: auto;
-    display: block;} */
-    /* div.center{
-        
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-         */
-    
-/* H1 { text-align: center } */
-body { text-align: center }
-img.badge {
-    display: block;
-    margin-right: auto;
+  /* background-image: url("grass7.jpg");
+  background-repeat: no-repeat;
+  background-position: center; */
 
-}
-img.sponsor {
-    margin-left: auto;
+  /* background-size: cover; */
+  /* box-sizing:border-box; min-height:100%;
+  padding:10px;
+  background-image: url("grass7.jpg");
+  background-origin: content-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
 
-    display: block;
-}
-div.inline-block {
-    display: inline-block;
- }
- body {
-    background-image: url("grass.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
+  
+  
+  /* background-size: 100%; */
+
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  border: 2px, black;
+  margin: 25px;
+  background-color: black;
+  /* padding: -200px; */
+  /* margin: 150px */
+  /* border: -200px; */
+
+  /* width: 55%; */
+  /* height: 55px; */
+  
   }
-body {
-    font-family: Arial, Helvetica, sans-serif;
-  }  
+  
+  
+
 h1 {
-    font-size: 75px;
-    font-family: "Copperplate", "Fantasy", serif;
-  }
-  h1.center {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 300px;
-    border: 5px solid green; 
-  }
-  .heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #newsblock { 
-      color: blue; 
+  font-size: 75px;
+  /* font-family: "Copperplate", "Fantasy", serif; */
   }
 
-#fixtures { 
-    color: rgb(10, 133, 20); 
-}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  /* background-image: url("grass7.jpg");
+  background-repeat: no-repeat;
+  background-position: center; */
+  border: 5px, black;
+  background-color: white;
+  }
 
-#about { 
-    color: rgb(255, 8, 0); 
-}
+.texthead {
+  font-size: 25px;
+  }
+
+.mainhead {
+  font-family: Helvetica, Arial, sans-serif;
+  word-spacing: -10px; 
+  letter-spacing: -3px;
+  }
+
+#navbar {
+  font-size: 25px;
+  margin-top: -24px;
+  word-spacing: 45px;
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 80px; */
+  /* padding: 0.01px 0; */
+  background: white;
+  border:1px, black
+  
+
+  
+  }
+
+a {
+  color: black;
+  }
+
+h3 {
+  font-size: 30px;
+  text-decoration: underline;
+  color:white;
+  
+  }
+h4 {
+  font-size: 25px;
+  /* text-decoration: underline; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: -75px;
+  }
+
+.story {
+  /* background-color: white;
+  width: 600px;
+  border-width: 5px, black;
+  align-self: center; */
+  
+margin: auto;
+width: 600px;
+/* border: 1px solid black;
+padding: 5px; */
+background-color: black;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-align: left;
+color: white;
+
+  }
+
+  
